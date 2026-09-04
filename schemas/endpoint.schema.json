@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Observed Endpoint",
+  "type": "object",
+  "required": ["id","method","path","provenance","confidence"],
+  "properties": {
+    "id":{"type":"string"},
+    "method":{"type":"string"},
+    "host":{"type":"string"},
+    "path":{"type":"string"},
+    "headers":{"type":"object","additionalProperties":{"type":"string"}},
+    "authentication_source":{"type":"string"},
+    "content_type":{"type":"string"},
+    "parameters":{"type":"array","items":{"type":"string"}},
+    "body_schema":{"type":"object"},
+    "response_schema":{"type":"object"},
+    "provenance":{"type":"array","items":{"type":"string"}},
+    "confidence":{"type":"number","minimum":0,"maximum":1}
+  }
+}
