@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence",
+  "type": "object",
+  "required": ["id", "type", "provenance", "observation", "confidence"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^EV-[0-9A-Za-z._-]+$"},
+    "type": {"type": "string", "enum": ["source", "static", "runtime", "network", "binary", "screenshot", "log", "tool-output"]},
+    "provenance": {"type": "string", "minLength": 1},
+    "target": {"type": "string"},
+    "component": {"type": "string"},
+    "observation": {"type": "string", "minLength": 1},
+    "collection_context": {"type": "string"},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "hypothesis_refs": {"type": "array", "items": {"type": "string"}},
+    "finding_refs": {"type": "array", "items": {"type": "string"}},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "integrity": {"type": "string"},
+    "raw_artifact": {"type": "string"}
+  },
+  "additionalProperties": false
+}
