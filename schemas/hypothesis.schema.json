@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Security Hypothesis",
+  "type": "object",
+  "required": ["id","asset","class","observation","hypothesis","evidence_refs","status","confidence"],
+  "properties": {
+    "id": {"type":"string"},
+    "asset": {"type":"string"},
+    "component_or_endpoint": {"type":"string"},
+    "class": {"type":"string"},
+    "observation": {"type":"string"},
+    "hypothesis": {"type":"string"},
+    "preconditions": {"type":"array","items":{"type":"string"}},
+    "evidence_refs": {"type":"array","items":{"type":"string"}},
+    "validation_plan": {"type":"string"},
+    "confidence": {"type":"number","minimum":0,"maximum":1},
+    "status": {"enum":["open","supported","rejected","inconclusive","confirmed"]}
+  }
+}
