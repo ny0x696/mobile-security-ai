@@ -1,0 +1,13 @@
+{
+  "id": "CASE-001",
+  "target": "REPLACE_WITH_AUTHORIZED_TARGET",
+  "status": "initialized",
+  "scope_ref": "SCP-001",
+  "created_at": "",
+  "updated_at": "",
+  "platform": "",
+  "artifacts": [],
+  "hypothesis_refs": [],
+  "evidence_refs": [],
+  "finding_refs": []
+}
