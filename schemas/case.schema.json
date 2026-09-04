@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Security Research Case",
+  "type": "object",
+  "required": ["id", "target", "status", "scope_ref"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^CASE-[0-9A-Za-z._-]+$"},
+    "target": {"type": "string", "minLength": 1},
+    "status": {"type": "string", "enum": ["initialized", "discovery", "analysis", "validation", "reporting", "closed"]},
+    "scope_ref": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "platform": {"type": "string"},
+    "artifacts": {"type": "array", "items": {"type": "string"}},
+    "hypothesis_refs": {"type": "array", "items": {"type": "string"}},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "finding_refs": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
