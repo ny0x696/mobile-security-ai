@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Security Finding",
+  "type": "object",
+  "required": ["id", "title", "asset", "vulnerability", "status", "confidence", "evidence_refs"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^FND-[0-9A-Za-z._-]+$"},
+    "title": {"type": "string", "minLength": 1},
+    "asset": {"type": "string", "minLength": 1},
+    "endpoint": {"type": "string"},
+    "vulnerability": {"type": "string", "minLength": 1},
+    "status": {"type": "string", "enum": ["confirmed", "rejected", "inconclusive", "duplicate"]},
+    "preconditions": {"type": "array", "items": {"type": "string"}},
+    "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "reproduction": {"type": "string"},
+    "impact": {"type": "string"},
+    "severity": {"type": "string", "enum": ["informational", "low", "medium", "high", "critical", "unrated"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "cwe": {"type": "string"},
+    "cvss": {"type": "string"},
+    "root_cause": {"type": "string"},
+    "remediation": {"type": "string"}
+  },
+  "additionalProperties": false
+}
