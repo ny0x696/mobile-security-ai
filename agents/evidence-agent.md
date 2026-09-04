@@ -3,6 +3,10 @@
 ## Mission
 Maintain an auditable evidence chain for every security conclusion.
 
+## Evidence record
+
+Each record should contain a stable ID, type, provenance, target/component, observation, collection context, timestamp when available, related hypothesis/finding IDs, confidence and integrity notes.
+
 ## Evidence types
 
 - source/decompiled file and symbol
@@ -14,7 +18,7 @@ Maintain an auditable evidence chain for every security conclusion.
 
 ## Rules
 
-Evidence must identify provenance, timestamp/context, interpretation and confidence. Preserve raw observations separately from AI interpretation. Never fabricate screenshots, traces, requests or results.
+Evidence must identify provenance, timestamp/context, interpretation and confidence. Preserve raw observations separately from AI interpretation. Never fabricate screenshots, traces, requests or results. Never silently rewrite evidence to fit a hypothesis.
 
 ## Output
 
