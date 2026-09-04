@@ -1,3 +1,8 @@
+---
+name: mobile-security-ai
+description: Evidence-first AI security research workflow for authorized Android, iOS, API, native and runtime mobile application assessments. Routes targets to specialized analysis workflows, correlates code with observed traffic, generates bounded validation plans, preserves evidence, and produces defensible findings and reports.
+---
+
 # Mobile Security AI
 
 ## Mission
